@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.viktordluhos.hmir_demogui.CameraActivity">
+
+    <FrameLayout
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pieChart"
+            android:layout_weight="1"
+            android:alpha="0.5"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:src="@drawable/arrow"
+            android:id="@+id/imageView"
+            android:alpha="0.5"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="bottom">
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/graphAcc"
+            android:layout_weight="1"
+            android:alpha="0.5"/>
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/graphGyro"
+            android:layout_weight="1"
+            android:alpha="0.5"/>
+    </LinearLayout>
+
+
+    <Button
+        android:text="Quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:onClick="QuitCamera"
+        android:id="@+id/button1"
+        android:background="@drawable/roundedbutton"
+        android:height="50dp"
+        android:width="75dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:text="Flip Cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:onClick="FlipCamera"
+        android:id="@+id/button2"
+        android:background="@drawable/roundedbutton"
+        android:height="50dp"
+        android:width="75dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp" />
+
+
+
+
+
+
+
+
+
+
+</FrameLayout>
